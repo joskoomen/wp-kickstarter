@@ -26,7 +26,7 @@
     "roave/security-advisories" : "dev-latest",
     "kint-php/kint": "^3.3",
     "symfony/console" : "^4.4",
-    "ypa/wp-cli" : "^1.5.0"
+    "joskoomen/wp-cli" : "^2.0.0"
   },
   "bin" : [
     "jkwp"
