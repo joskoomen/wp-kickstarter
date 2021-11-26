@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+
+<?php
+
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require __DIR__ . '/vendor/autoload.php';
+}
+
+$app = new Symfony\Component\Console\Application('Jos Koomen Wordpress Installer', '1.0.0');
+$app->add(new JosKoomen\Wordpress\Cli\Commands\CreateCommand());
+$app->add(new JosKoomen\Wordpress\Cli\Commands\ServeCommand);
+$app->add(new JosKoomen\Wordpress\Cli\Commands\PluginInstallCommand());
+$app->add(new JosKoomen\Wordpress\Cli\Commands\PluginUpdateCommand());
+$app->add(new JosKoomen\Wordpress\Cli\Commands\PluginVersionsCommand());
+$app->add(new JosKoomen\Wordpress\Cli\Commands\PluginRequireCommand());
+$app->add(new JosKoomen\Wordpress\Cli\Commands\PluginRemoveCommand());
+$app->run();
